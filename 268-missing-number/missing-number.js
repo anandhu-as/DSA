@@ -5,14 +5,14 @@
 //421
 //124
 //3 is the missng num
-var missingNumber = function(nums) {
-    nums.sort((a, b) => a - b);
+const missingNumber = (nums) => {
+   const arr= nums.sort((a, b) => a - b);
 
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== i) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== i) {
             return i;
         }
     }
 
-    return nums.length;
+    return arr.length;
 };
